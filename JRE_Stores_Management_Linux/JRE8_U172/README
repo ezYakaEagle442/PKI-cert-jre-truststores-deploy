@@ -1,0 +1,51 @@
+# Documentation:
+https://docs.oracle.com/javase/8/docs/technotes/tools/windows/keytool.html
+https://docs.oracle.com/javase/8/docs/technotes/guides/deploy/jcp.html#sthref338
+
+# Java Installation :
+	wget --no-cookies --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjdk8-downloads-2133151.html; oraclelicense=accept-securebackup-cookie" "http://edelivery.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-linux-x64.rpm"
+	
+	sudo ls -alL /usr/bin/jav*
+	sudo find / -name "java"
+	`which java` >> "testJava.log" # /usr/bin/java -> /etc/alternatives/java -> /usr/java/jdk1.8.0_172-amd64/jre/bin/java
+
+	ls -al /usr/java/latest -> /usr/java/latest -> /usr/java/jdk1.8.0_172-amd64
+	ls -alL /usr/java/latest
+	/var/lib/alternatives/java
+	
+## TrustStores installation directory 
+Note: By default JRE is installed only with one CA TrustStore at /etc/pki/java/cacerts :
+ls -al /etc/pki/java/cacerts -> /etc/pki/ca-trust/extracted/java/cacerts
+
+# Init
+setEnv.sh
+/!\ IMPORTANT run once AND only once backup-GA-cacerts.sh
+
+# AUTOMATION
+
+## before running modifyTrustStoresPassword.sh, modify run automation_run_as_root.bat set SYS_STOREPASS_NEW value to the content of file store-pass.txt
+
+
+/!\ BUG  during importCert.bat : keytool : java.util.IllegalFormatConversionException: d != java.lang.String
+see also https://stackoverflow.com/questions/47134165/keytool-import-certificate-java-util-illegalformatconversionexception-in-linux/47181882
+ problem on last java versions occurs only for some languages. 
+ Hence it is enough to force the output language of keytool in english to solve the problem by adding the parameter -J-Duser.language=en
+
+## Then run run automation_run_as_root.bat, this will perform the following steps:
+
+1. createRootTrustStores.sh
+2. createEmptyTrustStore.sh
+3. checkEmptyKeyStores.sh
+
+4. (manual check :Check the keystores are really empty, reading files below :)
+./tmp/trusted.certs_entries.txt
+./tmp/trusted.clientcerts_entries.txt
+./tmp/trusted.jssecerts_entries.txt
+
+
+5. modifyTrustStoresPassword.sh
+6. importCert.sh
+7. (list-CACerts.sh + listCerts.sh)
+8. checkSystemStores.sh
+9. copyStoresToJRE.sh
+10. run-JCP.sh (Final  manual check : Check with Java Control Pannel)

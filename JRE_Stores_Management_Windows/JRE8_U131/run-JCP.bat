@@ -1,0 +1,1 @@
+%JRE_BIN%\javacpl.exe
