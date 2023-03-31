@@ -1,5 +1,5 @@
 
-Welcome to GIO GIT service !
+Welcome to this Dummy GIT service !
 ==============
 
 JumpStart
@@ -18,18 +18,18 @@ JumpStart
 	│   └── ...                 # etc.
 	└── ...
 
-#For Group owners (Air Liquide Product Owners)
+# For Group owners (Product Owners)
 
     ##Process
-    1. Create a Business-Partner account in CARM for each Developer
-    2. Create a GITLab account for each of your Developer (through CARM)
-    3. Add the above user as a member of your GITLab Group with "Developer" role (through CARM)
+    1. Create anaccount in xxx for each Developer
+    2. Create a GIT account for each of your Developer (through xxxx)
+    3. Add the above user as a member of your GIT Group with "Developer" role (through xxx)
         
     ##Guideline
     
-#For End-Users (external Dev. Teams / Sub-Contractors)
+# For End-Users (external Dev. Teams / Sub-Contractors)
 
-    ##User Policy
+    ## User Policy
     	
     1. A 3 month expiration date must be created when creation a Personal Access Tokens
     2. Do never let passwords in clear text in your code ...
@@ -37,36 +37,25 @@ JumpStart
     
     ##Guideline   
     1. Request access to the Group owner (Air Liquide Product Owners)
-    2. migrate your code from SVN to GIO GIT
-    3. migrate your code from GITHub to GIO GIT 
-    4. migrate your code from your existing GITLab to GIO GIT     
+    2. migrate your code from SVN to GIT
+    3. migrate your code from GITHub to GIT 
+    4. migrate your code from your existing GITLab to GIT     
     
-#For GIO GITLab Admins
+# For GITLab Admins
 
     ##Configuration
     
     ##Security 
 
-#For GIO Security
+# For Security
 
-    ##Security governance
+    ## Security governance
     
-    ##Security audit  
+    ## Security audit  
 
-#Documentation
-
-    ##GIO
-1. [https://git.apps.airliquide.com/help](https://git.apps.airliquide.com/help)
-2. [https://site.airliquide.com/gio/service-offering/solutions/business-apps-foundations](https://site.airliquide.com/gio/service-offering/solutions/business-apps-foundations)
-3. [1TimePass](https://1timepass.apps.airliquide.com/protected/Help?language=en#03)
+# Documentation    
     
-    ##Google Drive / AODocs
-1. [https://aodocs.altirnao.com](https://aodocs.altirnao.com)
-2. [https://sites.google.com/airliquide.com/gio-operations-services/documentation](https://sites.google.com/airliquide.com/gio-operations-services/documentation)
-3. [https://drive.google.com/drive/folders/xxx](https://drive.google.com/drive/folders/xxx)
-    
-    
-    ##GIT
+    ## GIT
 1. [https://git-scm.com/book/en/v2/Getting-Started-Installing-Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 2. [https://git-scm.com/docs/git-config](https://git-scm.com/docs/git-config)
 3. [https://git-scm.com/downloads](https://git-scm.com/downloads)
@@ -74,7 +63,7 @@ JumpStart
 5. [http://wiki.eclipse.org/EGit/User_Guide](http://wiki.eclipse.org/EGit/User_Guide)
     	
     	
-    ##GITLab
+    ## GITLab
     
 1. GITLab Docs [docs.gitlab.com](https://docs.gitlab.com  "GITLab Docs").
 2. GITLab API Docs [docs.gitlab.com/ce/api](https://docs.gitlab.com/ce/api "GITLab API Docs").
