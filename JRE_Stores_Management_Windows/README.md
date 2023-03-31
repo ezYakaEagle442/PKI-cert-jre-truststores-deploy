@@ -33,19 +33,14 @@ JumpStart
     	
     1. A 3 month expiration date must be created when creation a Personal Access Tokens
     2. Do never let passwords in clear text in your code ...
-    3. Activate 1 device with 1TimePass:
-    
-    ##Guideline   
-    1. Request access to the Group owner (Air Liquide Product Owners)
-    2. migrate your code from SVN to GIT
-    3. migrate your code from GITHub to GIT 
-    4. migrate your code from your existing GITLab to GIT     
+    3. Activate 1 device with Authenticator
+        
     
 # For GITLab Admins
 
-    ##Configuration
+    ## Configuration
     
-    ##Security 
+    ## Security 
 
 # For Security
 
